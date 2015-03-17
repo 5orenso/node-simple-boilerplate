@@ -1,7 +1,7 @@
 {
   "name": "node-boilerplate",
-  "description": "A nice boilerplate with tests and code coverage.",
-  "version": "0.1.0",
+  "description": "A nice boilerplate with unit tests, linting and code coverage.",
+  "version": "0.2.0",
   "homepage": "https://github.com/5orenso/node-boilerplate",
   "author": {
     "name": "Øistein Sørensen",
@@ -9,26 +9,28 @@
   },
   "main": "main",
   "engines": {
-    "node": ">=0.10.21"
+    "node": ">=0.10.33"
   },
   "scripts": {
     "test": "grunt"
   },
   "devDependencies": {
+    "buster": "~0.7.8",
+    "buster-istanbul": "^0.1.13",
+    "grunt": "~0.4.1",
+    "grunt-buster": "~0.3.1",
     "grunt-contrib-jshint": "~0.6.4",
     "grunt-contrib-nodeunit": "~0.2.0",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt": "~0.4.1",
+    "grunt-jscs": "^1.5.0",
     "grunt-nodemon": "~0.1.2",
-    "grunt-shell": "~0.6.4",
-    "grunt-buster": "~0.3.1",
-    "buster": "~0.7.8"
+    "grunt-shell": "~0.6.4"
   },
   "keywords": [],
   "dependencies": {
-    "when": "~3.4.4",
-    "underscore": "~1.6.0",
-    "winston": "~0.7.3",
-    "commander": "~2.3.0"
+    "commander": "^2.3.0",
+    "underscore": "^1.6.0",
+    "when": "^3.4.6",
+    "winston": "^0.7.3"
   }
 }
