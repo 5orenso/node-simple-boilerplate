@@ -60,6 +60,11 @@ module.exports = function (grunt) {
                     'mv ../node_modules2 node_modules'
                 ].join('&&')
             }
+        },
+        coveralls: {
+            real_coverage: {
+                src: 'coverage/lcov.info'
+            }
         }
     });
 
@@ -71,6 +76,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-buster');
     grunt.loadNpmTasks("grunt-jscs");
+    grunt.loadNpmTasks('grunt-coveralls');
 
     // Default task.
     grunt.registerTask( "lint", [ "jshint", "jscs" ] );
@@ -78,6 +84,6 @@ module.exports = function (grunt) {
     grunt.registerTask('test', 'buster:unit');
     grunt.registerTask('check', ['watch']);
     grunt.registerTask('run', ['buster:unit', 'nodemon:dev']);
-    grunt.registerTask('artifact', ['shell']);
+    grunt.registerTask('artifact', ['shell', 'coveralls:real_coverage']);
 
 };
