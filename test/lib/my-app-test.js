@@ -46,7 +46,8 @@ buster.testCase('lib/logger', {
             var logger = {
                 log: this.spy()
             };
-            var myApp = require(appPath + 'lib/my-app')({}, {logger: logger});
+            var MyApp = require(appPath + 'lib/my-app');
+            var myApp = new MyApp({}, {logger: logger});
             myApp.run();
             assert.called(logger.log);
         },
@@ -55,7 +56,8 @@ buster.testCase('lib/logger', {
             var logger = {
                 log: this.spy()
             };
-            var myApp = require(appPath + 'lib/my-app')({logger: logger});
+            var MyApp = require(appPath + 'lib/my-app');
+            var myApp = new MyApp({logger: logger});
             myApp.run();
             assert.called(logger.log);
         }
