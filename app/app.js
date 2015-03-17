@@ -21,7 +21,8 @@ var logger = new Logger({
     logLevel: config.logLevel
 });
 
-var app = require(appPath + 'lib/my-app.js')({
+var App = require(appPath + 'lib/my-app.js');
+var app = new App({
     logger: logger
 });
 
