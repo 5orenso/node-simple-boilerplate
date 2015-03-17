@@ -8,18 +8,20 @@
 
 var path = require('path'),
     commander = require('commander'),
-    app_path = path.normalize(__dirname + '/../');
+    appPath = path.normalize(__dirname + '/../');
 
 commander
-    .option('-c, --config <file>', 'configuration file path', './config/config.js')
+    .option('-c, --config <file>', 'configuration file path', './config/config-dist.js')
+    .option('-s, --server <server ip>', 'ip of server', '127.0.0.1')
     .parse(process.argv);
-var config = require(app_path + commander.config);
+var config = require(appPath + commander.config);
 
-var logger = require(app_path + 'lib/logger')({
-    log_level : config.log_level
+var Logger = require(appPath + 'lib/logger');
+var logger = new Logger({
+    logLevel: config.logLevel
 });
 
-var app = require(app_path + 'lib/my-app.js')({
+var app = require(appPath + 'lib/my-app.js')({
     logger: logger
 });
 
