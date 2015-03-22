@@ -3,6 +3,13 @@
   "description": "A nice boilerplate with unit tests, linting and code coverage.",
   "version": "0.2.0",
   "homepage": "https://github.com/5orenso/node-boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/5orenso/node-boilerplate"
+  },
+  "bugs": {
+    "url": "https://github.com/5orenso/node-boilerplate/issues"
+  },
   "author": {
     "name": "Øistein Sørensen",
     "email": "sorenso@gmail.com"
