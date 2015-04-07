@@ -8,7 +8,6 @@
 
 var buster = require('buster'),
     assert = buster.assert,
-    refute = buster.refute,
     when   = require('when'),
     appPath = __dirname + '/../../';
 
@@ -34,9 +33,11 @@ buster.testCase('lib/logger', {
                 return 'my promise';
             })
                 .done(function success(result) {
+                    console.log(result);
                     assert(true);
                     done();
                 }, function error(result) {
+                    console.log(result);
                     assert(true);
                     done();
                 });

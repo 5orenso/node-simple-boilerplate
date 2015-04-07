@@ -6,12 +6,11 @@
  */
 'use strict';
 
-var buster = require('buster'),
-    assert = buster.assert,
-    refute = buster.refute,
-    when   = require('when'),
-    Logger = require('../../lib/logger'),
-    logger = new Logger({}, {
+var buster  = require('buster'),
+    assert  = buster.assert,
+    when    = require('when'),
+    appPath = __dirname + '/../../',
+    mock    =  {
         logger: {
             log: function (type, msg, meta) {
                 return {
@@ -21,8 +20,7 @@ var buster = require('buster'),
                 };
             }
         }
-    });
-
+    };
 var log = {
     type: 'info',
     msg: /\d+ \[\d*\]: boilerplate -> logging -> is -> fun/,
@@ -47,9 +45,12 @@ buster.testCase('lib/logger', {
     setUp: function () {
     },
     tearDown: function () {
+        delete require.cache[require.resolve(appPath + 'lib/logger')];
     },
     'Test logger:': {
         'log plain': function (done) {
+            var Logger  = require(appPath + 'lib/logger');
+            var logger  = new Logger({}, mock);
             when(logger.log('info', 'boilerplate', 'logging', 'is', 'fun'))
                 .done(function (obj) {
                     assert.equals(obj.type, log.type);
@@ -58,6 +59,8 @@ buster.testCase('lib/logger', {
                 });
         },
         'log w/meta': function (done) {
+            var Logger  = require(appPath + 'lib/logger');
+            var logger  = new Logger({}, mock);
             when(logger.log('info', 'boilerplate',
                 { meta1: 'logging', meta2: 'is', meta3: 'fun' },
                 { meta4: 'yes it is!'}))
@@ -69,6 +72,8 @@ buster.testCase('lib/logger', {
                 });
         },
         'err plain': function (done) {
+            var Logger  = require(appPath + 'lib/logger');
+            var logger  = new Logger({}, mock);
             when(logger.err('boilerplate', 'logging', 'is', 'fun'))
                 .done(function (obj) {
                     assert.equals(obj.type, err.type);
@@ -78,6 +83,8 @@ buster.testCase('lib/logger', {
                 });
         },
         'err w/meta': function (done) {
+            var Logger  = require(appPath + 'lib/logger');
+            var logger  = new Logger({}, mock);
             when(logger.err('boilerplate',
                 { meta1: 'logging', meta2: 'is', meta3: 'fun' },
                 { meta4: 'yes it is!'}))
@@ -89,9 +96,17 @@ buster.testCase('lib/logger', {
                 });
         },
         'set/get': function () {
+            var Logger  = require(appPath + 'lib/logger');
+            var logger  = new Logger({}, mock);
             assert(logger.set('boilerplate', 'logging is fun'));
             assert.equals(logger.get('boilerplate'), 'logging is fun');
-        }
+        },
+        'logger without mock': function () {
+            var Logger  = require(appPath + 'lib/logger');
+            var myLogger = new Logger({}, { logger: null });
+            myLogger.log('test');
+            assert(true);
 
+        }
     }
 });
