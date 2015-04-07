@@ -27,3 +27,19 @@ Travis CI is a hosted continuous integration service. It is integrated with GitH
 
 __Coveralls.io__
 Coveralls is a web service to help you track your code coverage over time, and ensure that all your new code is fully covered.
+
+
+### HOWTO upgrade dev environment
+```bash
+npm install buster --save-dev
+npm install buster-istanbul --save-dev
+npm install grunt --save-dev
+npm install grunt-buster --save-dev
+npm install grunt-contrib-jshint --save-dev
+npm install grunt-contrib-nodeunit --save-dev
+npm install grunt-contrib-watch --save-dev
+npm install grunt-coveralls --save-dev
+npm install grunt-jscs --save-dev
+npm install grunt-nodemon --save-dev
+npm install grunt-shell --save-dev
+```
