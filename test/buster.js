@@ -18,7 +18,7 @@ config['My tests'] = {
     },
     sources: [
         'lib/**/**/*.js',
-        'app/**/*.js'
+        //'app/**/*.js'
     ],
     extensions: [
         require('buster-istanbul')
