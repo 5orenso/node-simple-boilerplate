@@ -32,8 +32,7 @@ buster.testCase('lib/logger', {
             when(function functionWhichReturnsAPromise() {
                 return 'my promise';
             })
-                .done(function success(result) {
-                    console.log(result);
+                .done(function success() {
                     assert(true);
                     done();
                 }, function error(result) {
