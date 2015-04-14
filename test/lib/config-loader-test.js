@@ -26,7 +26,7 @@ buster.testCase('lib/config-loader', {
     },
     'config-validator:': {
         'load valid config file': function () {
-            var config = configLoader.load('../config/config-dist.js');
+            var config = configLoader.load(appPath + 'config/config-dist.js');
             assert(_.isObject(config));
         },
         'load invalid config file': function () {
