@@ -32,7 +32,7 @@ buster.testCase('lib/config-validator', {
                 var json = configJsonValid[i];
                 var isValid = validator.isValid(json);
                 if (!isValid) {
-                    console.log(JSON.stringify(json, null, 4), validator.errors());
+                    console.log(JSON.stringify(json, null, 4), validator.error());
                 }
                 assert(isValid);
                 assert(validator.error(), []);
