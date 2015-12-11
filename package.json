@@ -32,7 +32,8 @@
     "grunt-coveralls": "^1.0.0",
     "grunt-jscs": "^1.6.0",
     "grunt-nodemon": "^0.4.0",
-    "grunt-shell": "^1.1.2"
+    "grunt-shell": "^1.1.2",
+    "sinon": "^1.17.2"
   },
   "keywords": [],
   "dependencies": {
