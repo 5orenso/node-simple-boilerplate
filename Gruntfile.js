@@ -7,7 +7,6 @@
 'use strict';
 
 module.exports = function (grunt) {
-
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -45,6 +44,7 @@ module.exports = function (grunt) {
             unit: {
             }
         },
+
         nodemon: {
             dev: {
                 options: {
@@ -54,6 +54,7 @@ module.exports = function (grunt) {
                 tasks: ['lint', 'buster:unit']
             }
         },
+
         shell: {
             getLatestTag: {
                 command: 'git describe --abbrev=0 --tags',
@@ -85,11 +86,13 @@ module.exports = function (grunt) {
                 ].join('&&')
             }
         },
+
         coveralls: {
             real_coverage: {
                 src: 'coverage/lcov.info'
             }
         }
+
     });
 
     // These plugins provide necessary tasks.
