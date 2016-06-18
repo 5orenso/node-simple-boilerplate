@@ -67,9 +67,9 @@ module.exports = function (grunt) {
                         }
                         console.log('Latest tag: ' + stdout);
                         grunt.config.set('latestTag', stdout);
-                        console.log('s3cmd put artifact/' + stdout + '.tar.gz s3://node-boilerplate-releases/');
+                        console.log('s3cmd put artifact/' + stdout + '.tar.gz s3://node-simple-boilerplate-releases/');
                         console.log('');
-                        console.log('PS! Remember to upload a corresponding config tar-ball to s3://node-boilerplate-<purpose>-configs');
+                        console.log('PS! Remember to upload a corresponding config tar-ball to s3://node-simple-boilerplate-<purpose>-configs');
                         cb();
                     }
                 }
@@ -112,5 +112,6 @@ module.exports = function (grunt) {
     grunt.registerTask('check', ['watch']);
     grunt.registerTask('run', ['buster:unit', 'nodemon:dev']);
     grunt.registerTask('artifact', ['shell', 'coveralls:real_coverage']);
+    grunt.registerTask('report', ['coveralls:real_coverage']);
 
 };
