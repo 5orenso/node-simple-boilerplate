@@ -3,9 +3,14 @@
 [![Build Status](https://travis-ci.org/5orenso/node-boilerplate.svg)](https://travis-ci.org/5orenso/node-boilerplate)
 [![Coverage Status](https://coveralls.io/repos/5orenso/node-boilerplate/badge.svg)](https://coveralls.io/r/5orenso/node-boilerplate)
 
-A small boilerplate to help you kickstart your projects with unit tests, integration tests, code coverage, continous integration, code hinting and code style enforcement.
+A small boilerplate to help you kickstart your Node.js module projects with unit tests, integration tests, 
+code coverage, continous integration, code hinting and code style enforcement.
 
-Helper modules in use:
+I've also made everything ready for you so it's easy to publish your new module to the 
+[npmjs.com server](https://npmjs.com).
+
+
+## Helper modules in use:
 
 __JSHint__
 A tool that helps to detect errors and potential problems in your JavaScript code.
@@ -29,6 +34,19 @@ __Coveralls.io__
 Coveralls is a web service to help you track your code coverage over time, and ensure that all your new code is fully covered.
 
 
+## Howto report issues
+
+Use the [Issue tracker](https://github.com/5orenso/node-boilerplate/issues)
+
+
+### Howto upgrade modules
+```bash
+$ npm install -g npm-check-updates
+$ ncu -u
+$ npm install --save --no-optional
+```
+
+
 ### HOWTO upgrade dev environment
 ```bash
 npm install buster --save-dev
@@ -43,3 +61,10 @@ npm install grunt-jscs --save-dev
 npm install grunt-nodemon --save-dev
 npm install grunt-shell --save-dev
 ```
+
+
+## More about the author
+
+- Twitter: [@sorenso](https://twitter.com/sorenso)
+- Instagram: [@sorenso](https://instagram.com/sorenso)
+- Facebook: [@sorenso](https://facebook.com/sorenso)
