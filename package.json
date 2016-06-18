@@ -1,14 +1,14 @@
 {
-  "name": "node-boilerplate",
+  "name": "node-simple-boilerplate",
   "description": "A nice boilerplate with unit tests, linting and code coverage.",
-  "version": "1.0.0",
-  "homepage": "https://github.com/5orenso/node-boilerplate",
+  "version": "1.0.1",
+  "homepage": "https://github.com/5orenso/node-simple-boilerplate",
   "repository": {
     "type": "git",
-    "url": "https://github.com/5orenso/node-boilerplate"
+    "url": "https://github.com/5orenso/node-simple-boilerplate"
   },
   "bugs": {
-    "url": "https://github.com/5orenso/node-boilerplate/issues"
+    "url": "https://github.com/5orenso/node-simple-boilerplate/issues"
   },
   "author": {
     "name": "Øistein Sørensen",
@@ -20,6 +20,9 @@
   },
   "scripts": {
     "test": "grunt"
+  },
+  "bin": {
+    "node-simple-boilerplate": "./bin/node-simple-boilerplate"
   },
   "devDependencies": {
     "buster": "^0.7.18",
