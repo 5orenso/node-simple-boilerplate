@@ -1,17 +1,17 @@
 /*
  * https://github.com/5orenso
  *
- * Copyright (c) 2014 Øistein Sørensen
+ * Copyright (c) 2016 Øistein Sørensen
  * Licensed under the MIT license.
  */
 'use strict';
 
 var buster = require('buster'),
     assert = buster.assert,
-    when   = require('when'),
-    appPath = __dirname + '/../../';
+    path = require('path'),
+    appPath = path.normalize(__dirname + '/../../');
 
-buster.testCase('lib/logger', {
+buster.testCase('lib/my-app', {
     setUp: function () {
     },
     tearDown: function () {
@@ -29,36 +29,32 @@ buster.testCase('lib/logger', {
         },
 
         'dummy async w/promises test': function (done) {
-            when(function functionWhichReturnsAPromise() {
-                return 'my promise';
-            })
-                .done(function success() {
+            function promiseTest(input) {
+                return new Promise(function (resolve, reject) {
+                    if (input) {
+                        resolve(input);
+                    } else {
+                        reject(new Error(input));
+                    }
+                });
+            }
+            promiseTest(true)
+                .then(function () {
                     assert(true);
                     done();
-                }, function error(result) {
-                    assert(result);
-                    done();
+                })
+                .catch(function (error) {
+                    console.log(error);
+                    assert(false);
                 });
         },
 
-        'exposed run function w/mock services': function () {
-            var logger = {
-                log: this.spy()
-            };
-            var MyApp = require(appPath + 'lib/my-app');
-            var myApp = new MyApp({logger: logger});
-            myApp.run();
-            assert.called(logger.log);
-        },
-
         'exposed run function w/options': function () {
-            var logger = {
-                log: this.spy()
-            };
             var MyApp = require(appPath + 'lib/my-app');
-            var myApp = new MyApp({logger: logger});
-            myApp.run();
-            assert.called(logger.log);
+            var myApp = new MyApp();
+            var result = myApp.run();
+            assert.equals(result, 'Yo!');
         }
+
     }
 });
