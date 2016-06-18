@@ -12,15 +12,15 @@ var buster = require('buster'),
     appPath = path.normalize(__dirname + '/../');
 
 buster.testCase('lib/my-app', {
-    setUp: function () {
+    setUp: () => {
     },
-    tearDown: function () {
+    tearDown: () => {
         delete require.cache[require.resolve(appPath + 'lib/my-app')];
     },
     'Test module:': {
-        'exposed run function w/options': function () {
-            var app = require(appPath + 'app/app');
-            var result = app.run();
+        'exposed run function w/options': () => {
+            let app = require(appPath + 'app/app');
+            let result = app.run();
             assert.equals(result, 'Yo!');
         }
 

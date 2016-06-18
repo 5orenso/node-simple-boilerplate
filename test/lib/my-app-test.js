@@ -6,31 +6,31 @@
  */
 'use strict';
 
-var buster = require('buster'),
+let buster = require('buster'),
     assert = buster.assert,
     path = require('path'),
     appPath = path.normalize(__dirname + '/../../');
 
 buster.testCase('lib/my-app', {
-    setUp: function () {
+    setUp: () => {
     },
-    tearDown: function () {
+    tearDown: () => {
         delete require.cache[require.resolve(appPath + 'lib/my-app')];
     },
     'Test module:': {
-        'dummy sync test': function () {
+        'dummy sync test': () => {
             assert(true);
         },
 
-        'dummy async test': function (done) {
+        'dummy async test': (done) => {
             // Do some async stuff and call done.
             assert(true);
             done();
         },
 
-        'dummy async w/promises test': function (done) {
+        'dummy async w/promises test': (done) => {
             function promiseTest(input) {
-                return new Promise(function (resolve, reject) {
+                return new Promise((resolve, reject) => {
                     if (input) {
                         resolve(input);
                     } else {
@@ -39,20 +39,20 @@ buster.testCase('lib/my-app', {
                 });
             }
             promiseTest(true)
-                .then(function () {
+                .then(() => {
                     assert(true);
                     done();
                 })
-                .catch(function (error) {
+                .catch((error) => {
                     console.log(error);
                     assert(false);
                 });
         },
 
-        'exposed run function w/options': function () {
-            var MyApp = require(appPath + 'lib/my-app');
-            var myApp = new MyApp();
-            var result = myApp.run();
+        'exposed run function w/options': () => {
+            let MyApp = require(appPath + 'lib/my-app');
+            let myApp = new MyApp();
+            let result = myApp.run();
             assert.equals(result, 'Yo!');
         }
 

@@ -14,19 +14,19 @@ var buster  = require('buster'),
     date    = new libDate();
 
 buster.testCase('lib/logger', {
-    setUp: function () {
+    setUp: () => {
     },
-    tearDown: function () {
+    tearDown: () => {
     },
     'Date module:': {
-        'isoDate wo/input': function () {
-            var isoDateFormat = date.isoDate();
+        'isoDate wo/input': () => {
+            let isoDateFormat = date.isoDate();
             assert.match(isoDateFormat, /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[\+\-]\d{2}:\d{2}/);
         },
-        'isoDate w/input': function () {
-            var msec = Date.parse('March 21, 2012') / 1000;
-            var d = new Date(msec);
-            var isoDateFormat = date.isoDate(d);
+        'isoDate w/input': () => {
+            let msec = Date.parse('March 21, 2012') / 1000;
+            let d = new Date(msec);
+            let isoDateFormat = date.isoDate(d);
             assert.match(isoDateFormat, /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[\+\-]\d{2}:\d{2}/);
             assert.match(isoDateFormat, /2012-03-21T00:00:00\+\d{2}:\d{2}/);
         }
