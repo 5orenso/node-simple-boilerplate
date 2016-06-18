@@ -63,9 +63,13 @@ Do your magic and create a pull request.
 
 
 ### Howto report issues
-
 Use the [Issue tracker](https://github.com/5orenso/node-simple-boilerplate/issues)
 
+
+### Howto update CHANGELOG.md
+```bash
+$ bash ./changelog.sh
+```
 
 ### Howto upgrade modules
 ```bash
