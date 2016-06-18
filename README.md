@@ -1,7 +1,7 @@
-# node-boilerplate
+# Boilerplate for your brand new Node.js module - NPM ready
 
-[![Build Status](https://travis-ci.org/5orenso/node-boilerplate.svg)](https://travis-ci.org/5orenso/node-boilerplate)
-[![Coverage Status](https://coveralls.io/repos/5orenso/node-boilerplate/badge.svg)](https://coveralls.io/r/5orenso/node-boilerplate)
+[![Build Status](https://travis-ci.org/5orenso/node-simple-boilerplate.svg?branch=master)](https://travis-ci.org/5orenso/node-simple-boilerplate)
+[![Coverage Status](https://coveralls.io/repos/github/5orenso/node-simple-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/5orenso/node-simple-boilerplate?branch=master)
 
 A small boilerplate to help you kickstart your Node.js module projects with unit tests, integration tests, 
 code coverage, continous integration, code hinting and code style enforcement.
@@ -16,10 +16,12 @@ __JSHint__
 A tool that helps to detect errors and potential problems in your JavaScript code.
 
 __Grunt__
-The Javascript task runner. In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes.
+The Javascript task runner. In one word: automation. The less work you have to do when performing repetitive 
+tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes.
 
 __Buster.js__
-A browser JavaScript testing toolkit. It does browser testing with browser automation (think JsTestDriver), QUnit style static HTML page testing, testing in headless browsers (PhantomJS, jsdom), and more.
+A browser JavaScript testing toolkit. It does browser testing with browser automation (think JsTestDriver), 
+QUnit style static HTML page testing, testing in headless browsers (PhantomJS, jsdom), and more.
 
 __JSCS__
 JSCS is a code style linter for programmatically enforcing your style guide.
@@ -28,15 +30,41 @@ __Istanbul__
 A Javascript code coverage tool written in JS.
 
 __Travis__
-Travis CI is a hosted continuous integration service. It is integrated with GitHub and offers first class support for many languages.
+Travis CI is a hosted continuous integration service. It is integrated with GitHub and offers first class 
+support for many languages.
 
 __Coveralls.io__
-Coveralls is a web service to help you track your code coverage over time, and ensure that all your new code is fully covered.
+Coveralls is a web service to help you track your code coverage over time, and ensure that all your new code is 
+fully covered.
 
 
-## Howto report issues
+### Howto to get started
+```bash
+git clone git@github.com:5orenso/node-simple-boilerplate.git
+cd node-simple-boilerplate/
+npm install
+bash ./install.sh
+# Follow the instruction.
+#     Example path input: ../my-new-module
+```
 
-Use the [Issue tracker](https://github.com/5orenso/node-boilerplate/issues)
+Start developing. Remember to start watching your files:
+```bash 
+grunt watch
+```
+
+
+### Howto contribute
+
+```bash
+git clone git@github.com:5orenso/node-simple-boilerplate.git
+```
+Do your magic and create a pull request.
+
+
+### Howto report issues
+
+Use the [Issue tracker](https://github.com/5orenso/node-simple-boilerplate/issues)
 
 
 ### Howto upgrade modules
