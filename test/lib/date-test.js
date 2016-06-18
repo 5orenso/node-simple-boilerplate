@@ -1,15 +1,17 @@
 /*
  * https://github.com/5orenso
  *
- * Copyright (c) 2014 Øistein Sørensen
+ * Copyright (c) 2016 Øistein Sørensen
  * Licensed under the MIT license.
  */
 'use strict';
 
 var buster  = require('buster'),
     assert  = buster.assert,
-    libDate = require('../../lib/date'),
-    date    = new libDate({}, {});
+    path = require('path'),
+    appPath = path.normalize(__dirname + '/../../'),
+    libDate = require(appPath + 'lib/date'),
+    date    = new libDate();
 
 buster.testCase('lib/logger', {
     setUp: function () {
