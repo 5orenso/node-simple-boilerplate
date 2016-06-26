@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/5orenso/node-simple-boilerplate.svg?branch=master)](https://travis-ci.org/5orenso/node-simple-boilerplate)
 [![Coverage Status](https://coveralls.io/repos/github/5orenso/node-simple-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/5orenso/node-simple-boilerplate?branch=master)
+[![GitHub version](https://badge.fury.io/gh/5orenso%2Fnode-simple-boilerplate.svg)](https://badge.fury.io/gh/5orenso%2Fnode-simple-boilerplate)
 [![npm version](https://badge.fury.io/js/node-simple-boilerplate.svg)](https://badge.fury.io/js/node-simple-boilerplate)
 
 
