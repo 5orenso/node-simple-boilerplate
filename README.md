@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/5orenso/node-simple-boilerplate.svg?branch=master)](https://travis-ci.org/5orenso/node-simple-boilerplate)
 [![Coverage Status](https://coveralls.io/repos/github/5orenso/node-simple-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/5orenso/node-simple-boilerplate?branch=master)
+[![npm version](https://badge.fury.io/js/node-simple-boilerplate.svg)](https://badge.fury.io/js/node-simple-boilerplate)
+
 
 A small boilerplate to help you kickstart your Node.js module projects with unit tests, integration tests, 
 code coverage, continous integration, code hinting and code style enforcement.
