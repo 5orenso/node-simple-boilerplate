@@ -37,32 +37,32 @@ Scanner detecting the use of JavaScript libraries with known vulnerabilities.
 
 ### Howto to get started
 ```bash
-git clone git@github.com:5orenso/node-simple-boilerplate.git
-cd node-simple-boilerplate/
-npm install
-bash ./install.sh
+$ git clone git@github.com:5orenso/node-simple-boilerplate.git
+$ cd node-simple-boilerplate/
+$ npm install
+$ bash ./install.sh
 # Follow the instruction.
 #     Example path input: ../my-new-module
 ```
 
 Start developing. Remember to start watching your files:
 ```bash
-grunt watch
+$ grunt watch
 ```
 
 ### Howto check for vulnerarties in modules
 ```bash
 # Install Node Security Platform CLI
-npm install nsp --global  
+$ npm install nsp --global  
 
 # From inside your project directory
-nsp check  
+$ nsp check  
 ```
 
 ### Howto contribute
 
 ```bash
-git clone git@github.com:5orenso/node-simple-boilerplate.git
+$ git clone git@github.com:5orenso/node-simple-boilerplate.git
 ```
 Do your magic and create a pull request.
 

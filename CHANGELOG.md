@@ -1,4 +1,9 @@
-* _2016-06-18_: Bumped version. (HEAD -> master, origin/master, origin/HEAD) [Øistein Sørensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/c5a7c1d2fd116fc57c93c6fd87a721659c71fbf8">view commit</a>
+* _2016-08-13_: Added retire.js to check for vulnerabilities (HEAD -> master, origin/master, origin/HEAD) [Øistein Sørensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/c2c818ed6838ac9353086c11d3e605bc61eb97a8">view commit</a>
+* _2016-07-11_: Added more comments. [Øistein Sørensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/490a7c07d6501ff654e8947bde2b975ba1c5a4be">view commit</a>
+* _2016-06-26_: Added github badge. [Øistein Sørensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/9a2ec4188802cf3e88f17f537dc333854896def8">view commit</a>
+* _2016-06-26_: Added npm badge. [Øistein Sørensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/69f5e1d61ba2bf3465d83bb38444405c5907361c">view commit</a>
+* _2016-06-18_: Updated changelog. [Øistein Sørensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/a774d5615a4d7c490fabf1d6b1dc5bee7690bf5d">view commit</a>
+* _2016-06-18_: Bumped version. [Øistein Sørensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/c5a7c1d2fd116fc57c93c6fd87a721659c71fbf8">view commit</a>
 * _2016-06-18_: Added JSDocs [Øistein Sørensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/c1f7dbf5f9c29664c5c3abce638c4115e4ab084f">view commit</a>
 * _2016-06-18_: Bumping version and updated changelog. [Øistein Sørensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/1d3c791342a9b231667d9877a114bc474bb28ef3">view commit</a>
 * _2016-06-18_: Switching to a bit more ECMAscript2015, variables and arrow functions. [Øistein Sørensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/e2c1e756ecaeb0f08142a304da05512b08677512">view commit</a>

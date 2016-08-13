@@ -1,7 +1,7 @@
 {
   "name": "node-simple-boilerplate",
   "description": "A nice boilerplate with unit tests, linting and code coverage.",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "homepage": "https://github.com/5orenso/node-simple-boilerplate",
   "repository": {
     "type": "git",
