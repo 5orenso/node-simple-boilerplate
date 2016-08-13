@@ -50,15 +50,6 @@ Start developing. Remember to start watching your files:
 $ grunt watch
 ```
 
-### Howto check for vulnerarties in modules
-```bash
-# Install Node Security Platform CLI
-$ npm install nsp --global  
-
-# From inside your project directory
-$ nsp check  
-```
-
 ### Howto contribute
 
 ```bash
@@ -77,7 +68,17 @@ $ bash ./changelog.sh
 ### Howto update NPM module
 
 1. Bump version inside `package.json`
-2. 
+2. Push all changes to Github.
+3. Push all changes to npmjs.com: `$ bash ./npm-release.sh`.
+
+### Howto check for vulnerabilities in modules
+```bash
+# Install Node Security Platform CLI
+$ npm install nsp --global  
+
+# From inside your project directory
+$ nsp check  
+```
 
 ### Howto upgrade modules
 ```bash
