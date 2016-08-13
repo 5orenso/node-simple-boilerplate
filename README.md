@@ -5,13 +5,9 @@
 [![GitHub version](https://badge.fury.io/gh/5orenso%2Fnode-simple-boilerplate.svg)](https://badge.fury.io/gh/5orenso%2Fnode-simple-boilerplate)
 [![npm version](https://badge.fury.io/js/node-simple-boilerplate.svg)](https://badge.fury.io/js/node-simple-boilerplate)
 
+A small boilerplate to help you kickstart your Node.js module projects with unit tests, integration tests, code coverage, continous integration, code hinting and code style enforcement.
 
-A small boilerplate to help you kickstart your Node.js module projects with unit tests, integration tests, 
-code coverage, continous integration, code hinting and code style enforcement.
-
-I've also made everything ready for you so it's easy to publish your new module to the 
-[npmjs.com server](https://npmjs.com).
-
+I've also made everything ready for you so it's easy to publish your new module to the [npmjs.com server](https://npmjs.com).
 
 ## Helper modules in use:
 
@@ -19,12 +15,10 @@ __JSHint__
 A tool that helps to detect errors and potential problems in your JavaScript code.
 
 __Grunt__
-The Javascript task runner. In one word: automation. The less work you have to do when performing repetitive 
-tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes.
+The Javascript task runner. In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes.
 
 __Buster.js__
-A browser JavaScript testing toolkit. It does browser testing with browser automation (think JsTestDriver), 
-QUnit style static HTML page testing, testing in headless browsers (PhantomJS, jsdom), and more.
+A browser JavaScript testing toolkit. It does browser testing with browser automation (think JsTestDriver), QUnit style static HTML page testing, testing in headless browsers (PhantomJS, jsdom), and more.
 
 __JSCS__
 JSCS is a code style linter for programmatically enforcing your style guide.
@@ -33,13 +27,13 @@ __Istanbul__
 A Javascript code coverage tool written in JS.
 
 __Travis__
-Travis CI is a hosted continuous integration service. It is integrated with GitHub and offers first class 
-support for many languages.
+Travis CI is a hosted continuous integration service. It is integrated with GitHub and offers first class support for many languages.
 
 __Coveralls.io__
-Coveralls is a web service to help you track your code coverage over time, and ensure that all your new code is 
-fully covered.
+Coveralls is a web service to help you track your code coverage over time, and ensure that all your new code is fully covered.
 
+__Retire__
+Scanner detecting the use of JavaScript libraries with known vulnerabilities.
 
 ### Howto to get started
 ```bash
@@ -52,10 +46,18 @@ bash ./install.sh
 ```
 
 Start developing. Remember to start watching your files:
-```bash 
+```bash
 grunt watch
 ```
 
+### Howto check for vulnerarties in modules
+```bash
+# Install Node Security Platform CLI
+npm install nsp --global  
+
+# From inside your project directory
+nsp check  
+```
 
 ### Howto contribute
 
@@ -64,15 +66,18 @@ git clone git@github.com:5orenso/node-simple-boilerplate.git
 ```
 Do your magic and create a pull request.
 
-
 ### Howto report issues
 Use the [Issue tracker](https://github.com/5orenso/node-simple-boilerplate/issues)
-
 
 ### Howto update CHANGELOG.md
 ```bash
 $ bash ./changelog.sh
 ```
+
+### Howto update NPM module
+
+1. Bump version inside `package.json`
+2. 
 
 ### Howto upgrade modules
 ```bash
@@ -80,7 +85,6 @@ $ npm install -g npm-check-updates
 $ ncu -u
 $ npm install --save --no-optional
 ```
-
 
 ### HOWTO upgrade dev environment
 ```bash
@@ -96,8 +100,22 @@ $ npm install grunt-jscs --save-dev
 $ npm install grunt-nodemon --save-dev
 $ npm install grunt-shell --save-dev
 $ npm install grunt-jsdoc --save-dev
+$ npm install grunt-retire --save-dev
 ```
 
+### Versioning
+For transparency and insight into the release cycle, releases will be
+numbered with the follow format:
+
+<major>.<minor>.<patch>
+
+And constructed with the following guidelines:
+
+* Breaking backwards compatibility bumps the major
+* New additions without breaking backwards compatibility bumps the minor
+* Bug fixes and misc changes bump the patch
+
+For more information on semantic versioning, please visit http://semver.org/.
 
 ## More about the author
 
