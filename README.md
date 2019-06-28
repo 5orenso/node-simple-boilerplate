@@ -11,20 +11,9 @@ I've also made everything ready for you so it's easy to publish your new module 
 
 ## Helper modules in use:
 
-__JSHint__
-A tool that helps to detect errors and potential problems in your JavaScript code.
+__Jest__ A browser JavaScript testing toolkit. Jest is used by Facebook to test all JavaScript code including React applications. One of Jest's philosophies is to provide an integrated "zero-configuration" experience.
 
-__Grunt__
-The Javascript task runner. In one word: automation. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes.
-
-__Buster.js__
-A browser JavaScript testing toolkit. It does browser testing with browser automation (think JsTestDriver), QUnit style static HTML page testing, testing in headless browsers (PhantomJS, jsdom), and more.
-
-__JSCS__
-JSCS is a code style linter for programmatically enforcing your style guide.
-
-__Istanbul__
-A Javascript code coverage tool written in JS.
+__ESLint__ ESLint is a code style linter for programmatically enforcing your style guide.
 
 __Travis__
 Travis CI is a hosted continuous integration service. It is integrated with GitHub and offers first class support for many languages.
@@ -34,6 +23,7 @@ Coveralls is a web service to help you track your code coverage over time, and e
 
 __Retire__
 Scanner detecting the use of JavaScript libraries with known vulnerabilities.
+
 
 ### Howto to get started
 ```bash
@@ -47,8 +37,15 @@ $ bash ./install.sh
 
 Start developing. Remember to start watching your files:
 ```bash
-$ grunt watch
+$ npm run test:watch
 ```
+
+
+### HOWTO fix eslint issues
+```bash
+$ eslint --fix lib/utilities.js
+```
+
 
 ### Howto contribute
 
@@ -57,19 +54,23 @@ $ git clone git@github.com:5orenso/node-simple-boilerplate.git
 ```
 Do your magic and create a pull request.
 
+
 ### Howto report issues
 Use the [Issue tracker](https://github.com/5orenso/node-simple-boilerplate/issues)
+
 
 ### Howto update CHANGELOG.md
 ```bash
 $ bash ./changelog.sh
 ```
 
+
 ### Howto update NPM module
 
 1. Bump version inside `package.json`
 2. Push all changes to Github.
 3. Push all changes to npmjs.com: `$ bash ./npm-release.sh`.
+
 
 ### Howto check for vulnerabilities in modules
 ```bash
@@ -80,29 +81,14 @@ $ npm install nsp --global
 $ nsp check  
 ```
 
+
 ### Howto upgrade modules
 ```bash
-$ npm install -g npm-check-updates
-$ ncu -u
-$ npm install --save --no-optional
+$ sudo npm install -g npm-check-updates
+$ ncu -u -a
+$ npm install --no-optional
 ```
 
-### HOWTO upgrade dev environment
-```bash
-$ npm install buster --save-dev
-$ npm install buster-istanbul --save-dev
-$ npm install grunt --save-dev
-$ npm install grunt-buster --save-dev
-$ npm install grunt-contrib-jshint --save-dev
-$ npm install grunt-contrib-nodeunit --save-dev
-$ npm install grunt-contrib-watch --save-dev
-$ npm install grunt-coveralls --save-dev
-$ npm install grunt-jscs --save-dev
-$ npm install grunt-nodemon --save-dev
-$ npm install grunt-shell --save-dev
-$ npm install grunt-jsdoc --save-dev
-$ npm install grunt-retire --save-dev
-```
 
 ### Versioning
 For transparency and insight into the release cycle, releases will be
@@ -117,6 +103,27 @@ And constructed with the following guidelines:
 * Bug fixes and misc changes bump the patch
 
 For more information on semantic versioning, please visit http://semver.org/.
+
+
+## Contributions and feedback:
+
+We ❤️ contributions and feedback.
+
+If you want to contribute, please check out the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
+If you have any question or suggestion create an issue.
+
+Bug reports should always be done with a new issue.
+
+
+## Other Resources
+
+* [AWS Basic setup with Cloudformation](https://github.com/5orenso/aws-cloudformation-base)
+* [AWS Lambda boilerplate](https://github.com/5orenso/aws-lambda-boilerplate)
+* [Automated AWS Lambda update](https://github.com/5orenso/aws-lambda-autodeploy-lambda)
+* [AWS API Gateway setup with Cloudformation](https://github.com/5orenso/aws-cloudformation-api-gateway)
+* [AWS IoT setup with Cloudformation](https://github.com/5orenso/aws-cloudformation-iot)
+
 
 ## More about the author
 

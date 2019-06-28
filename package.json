@@ -1,7 +1,7 @@
 {
   "name": "node-simple-boilerplate",
   "description": "A nice boilerplate with unit tests, linting and code coverage.",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "homepage": "https://github.com/5orenso/node-simple-boilerplate",
   "repository": {
     "type": "git",
@@ -16,30 +16,42 @@
   },
   "main": "app/app.js",
   "engines": {
-    "node": ">=4.3"
+    "node": ">=8.11.0"
   },
   "scripts": {
-    "test": "grunt"
+    "lint": "eslint ./lib/**/*.js ./app/**/*.js",
+    "test": "jest --coverage",
+    "test:simple": "jest",
+    "test:watch": "jest --watch --onlyChanged",
+    "build": "bash ./bin/build-release.sh",
+    "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "bin": {
     "node-simple-boilerplate": "./bin/node-simple-boilerplate"
   },
   "devDependencies": {
-    "buster": "^0.7.18",
-    "buster-istanbul": "^0.1.13",
-    "grunt": "^1.0.1",
-    "grunt-buster": "^0.4.2",
-    "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-nodeunit": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-coveralls": "^1.0.0",
-    "grunt-jscs": "^3.0.0",
-    "grunt-jsdoc": "^2.1.0",
-    "grunt-nodemon": "^0.4.0",
-    "grunt-retire": "^1.0.1",
-    "grunt-shell": "^1.1.2",
-    "ink-docstrap": "^1.2.1"
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-standard-preact": "^1.1.6",
+    "eslint-plugin-import": "^2.18.0",
+    "jest": "^24.8.0"
   },
   "keywords": [],
-  "dependencies": {}
+  "dependencies": {},
+  "jest": {
+    "verbose": true,
+    "globals": {
+      "NODE_ENV": "test"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src/frontend",
+      "src/shared"
+    ]
+  }
 }
