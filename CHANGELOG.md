@@ -1,4 +1,9 @@
-* _2016-08-13_: Added retire.js to check for vulnerabilities (HEAD -> master, origin/master, origin/HEAD) [Øistein Sørensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/c2c818ed6838ac9353086c11d3e605bc61eb97a8">view commit</a>
+* _2019-06-28_: Fixed typo. (HEAD -> master, origin/master, origin/HEAD) [Oistein Sorensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/80ac081c22b6891e8d7425b81f24b5b3e11a6cb2">view commit</a>
+* _2019-06-28_: Updated travis file. [Oistein Sorensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/68329e630f4cc4fcb5930b316adfe2b8b6d1348b">view commit</a>
+* _2019-06-28_: New 2.0.0 updates. [Oistein Sorensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/3fe2bd3b22f60242e0abb8874d7255c37b013137">view commit</a>
+* _2016-08-13_: Updated docs. [Øistein Sørensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/1f468663487fa13a4e206271c5e5e011859a6cf4">view commit</a>
+* _2016-08-13_: Update version and docs. [Øistein Sørensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/0182bd86d38be48b6f25c8a89c0a3d5504db8558">view commit</a>
+* _2016-08-13_: Added retire.js to check for vulnerabilities [Øistein Sørensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/c2c818ed6838ac9353086c11d3e605bc61eb97a8">view commit</a>
 * _2016-07-11_: Added more comments. [Øistein Sørensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/490a7c07d6501ff654e8947bde2b975ba1c5a4be">view commit</a>
 * _2016-06-26_: Added github badge. [Øistein Sørensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/9a2ec4188802cf3e88f17f537dc333854896def8">view commit</a>
 * _2016-06-26_: Added npm badge. [Øistein Sørensen] <a href="http://github.com/5orenso/node-simple-boilerplate/commit/69f5e1d61ba2bf3465d83bb38444405c5907361c">view commit</a>
