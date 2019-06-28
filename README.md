@@ -94,7 +94,7 @@ $ npm install --no-optional
 For transparency and insight into the release cycle, releases will be
 numbered with the follow format:
 
-<major>.<minor>.<patch>
+`<major>.<minor>.<patch>`
 
 And constructed with the following guidelines:
 
