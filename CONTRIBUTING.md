@@ -24,7 +24,7 @@ You are now ready to start doing your changes.
 
 Testing
 ----
-Node Simple Boilerplate uses npm and Jest to run test. Take a look in the test directory and always add tests
+Node Simple Boilerplate uses npm and Jest to run test. Take a look in the `__tests__` directory and always add tests
 to your changes.
 
 
