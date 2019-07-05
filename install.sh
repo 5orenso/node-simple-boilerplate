@@ -11,25 +11,24 @@ read PATH
 
 # Copying paths
 /bin/cp -Rv app $PATH/.
+/bin/cp -Rv bin $PATH/.
 /bin/cp -Rv lib $PATH/.
-/bin/cp -Rv test $PATH/.
+/bin/cp -Rv __tests__ $PATH/.
 
 # Copying files
 /bin/cp -v .coveralls-dist.yml $PATH/.
+/bin/cp -v .eslintrc.json $PATH/.
 /bin/cp -v .gitignore $PATH/.
-/bin/cp -v .jscsrc $PATH/.
-/bin/cp -v .jshintrc $PATH/.
+/bin/cp -v .retireignore $PATH/.
 /bin/cp -v .travis.yml $PATH/.
-/bin/cp -v Gruntfile.js $PATH/.
-/bin/cp -v LICENSE $PATH/.
-/bin/cp -v README.md $PATH/.
 /bin/cp -v changelog.sh $PATH/.
+/bin/cp -v CONTRIBUTING.md $PATH/.
 /bin/cp -v install.sh $PATH/.
-/bin/cp -v package.json $PATH/.
-/bin/cp -v run-app.sh $PATH/.
-/bin/cp -v run-tests.sh $PATH/.
-/bin/cp -v run-watch.sh $PATH/.
+/bin/cp -v jest.config.js $PATH/.
+/bin/cp -v LICENSE $PATH/.
 /bin/cp -v npm-release.sh $PATH/.
+/bin/cp -v package.json $PATH/.
+/bin/cp -v README.md $PATH/.
 
 cd $PATH
 /bin/cp -v ./.coveralls-dist.yml ./.coveralls.yml
